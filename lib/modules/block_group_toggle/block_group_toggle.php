@@ -16,7 +16,7 @@
 			return $this;
 		}
 
-		protected function load_settings(): block_group_toggle {
+		public function load_settings(): block_group_toggle {
 			$this->get_setting( 'activate' )
 				->set_title( __( 'Enable Style: Toggle Group Block', 'sv100' ) )
 				->set_description( __( 'Toggle Group by linking to group ID with prefix #sv_toggle_', 'sv100' ) )

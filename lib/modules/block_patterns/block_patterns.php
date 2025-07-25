@@ -15,7 +15,7 @@
 
 			return $this;
 		}
-		protected function load_settings(): block_patterns {
+		public function load_settings(): block_patterns {
 			$this->get_setting( 'activate' )
 				->set_title( __( 'Enable Custom Block Patterns', 'sv100' ) )
 				->set_description( __( 'Create custom block patterns.', 'sv100' ) )

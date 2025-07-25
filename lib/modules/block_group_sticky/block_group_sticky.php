@@ -16,7 +16,7 @@
 			return $this;
 		}
 
-		protected function load_settings(): block_group_sticky {
+		public function load_settings(): block_group_sticky {
 			$this->get_setting( 'activate' )
 				->set_title( __( 'Enable Style: Sticky Group Block', 'sv100' ) )
 				->set_description( __( 'Groups can be made sticky. Enable this to enable in style-selection of group block.', 'sv100' ) )

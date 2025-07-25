@@ -42,7 +42,7 @@
 
 			return $this;
 		}
-		protected function load_settings(): scroll_progress_bar {
+		public function load_settings(): scroll_progress_bar {
 			$this->get_setting( 'activate' )
 			     ->set_title( __( 'Enable Scroll Progress Bar', 'sv100' ) )
 			     ->load_type( 'checkbox' );

@@ -15,7 +15,7 @@
 
 			return $this;
 		}
-		protected function load_settings(): custom_lightbox {
+		public function load_settings(): custom_lightbox {
 			$this->get_setting( 'activate' )
 				->set_title( __( 'Enable Custom Lightbox', 'sv100_premium' ) )
 				->set_description( __( 'Show Lightbox when linking to an anchor for Group with Hidden Style', 'sv100_premium' ) )

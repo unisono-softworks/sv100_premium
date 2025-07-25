@@ -31,7 +31,7 @@ class gutenberg_extended_block_controls extends modules {
 		return $this;
 	}
 
-	protected function load_settings(): gutenberg_extended_block_controls {
+	public function load_settings(): gutenberg_extended_block_controls {
 		$this->get_setting('activate')
 		     ->set_title(__('Enable Feature', 'sv100'))
 		     ->load_type('checkbox');

@@ -16,7 +16,7 @@
 			return $this;
 		}
 
-		protected function load_settings(): block_group_flip {
+		public function load_settings(): block_group_flip {
 			$this->get_setting( 'activate' )
 				->set_title( __( 'Enable Style: Flip Group Block', 'sv100' ) )
 				->set_description( __( 'Group Block with two Child-Group-Blocks flips to second child when click/hover on first child.', 'sv100' ) )
