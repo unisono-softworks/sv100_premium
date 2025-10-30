@@ -14,20 +14,21 @@ class gutenberg_extended_block_controls extends modules {
 		if ($this->is_active()) {
 			$this->register_scripts();
 			add_action('wp', array($this, 'enqueue_scripts'));
-		}
 
-		// normal frontend call
-		if (is_admin() === false && wp_doing_ajax() === false) {
-			add_filter('render_block', array($this, 'render_block_overwrite'), 99, 2);
-			add_action('wp_footer', array($this, 'get_frontend_block_styles'), 99, 1);
-		}
 
-		// ajax call
-		if (wp_doing_ajax()) {
-			add_filter('render_block', array($this, 'render_block_overwrite'), 99, 2);
-			add_action('the_content', array($this, 'parse_the_content'), 99, 1);
-		}
+			// normal frontend call
+			if (is_admin() === false && wp_doing_ajax() === false) {
+				add_filter('render_block', array($this, 'render_block_overwrite'), 99, 2);
+				add_action('wp_footer', array($this, 'get_frontend_block_styles'), 99, 1);
+			}
 
+			// ajax call
+			if (wp_doing_ajax()) {
+				add_filter('render_block', array($this, 'render_block_overwrite'), 99, 2);
+				add_action('the_content', array($this, 'parse_the_content'), 99, 1);
+			}
+		}
+		
 		return $this;
 	}
 
